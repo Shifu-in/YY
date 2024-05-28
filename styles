@@ -19,8 +19,8 @@ body, html {
 }
 
 #loading-screen img {
-    width: auto;
-    height: auto;
+    width: 100px;
+    height: 100px;
 }
 
 #main-screen, #home-screen, #settings-screen, #achievements-screen, #channels-screen {
@@ -37,11 +37,14 @@ body, html {
 }
 
 #tap-area {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
 }
 
 #tap-gif {
-    width: auto;
+    max-width: 100%;
     height: auto;
     cursor: pointer;
 }
@@ -80,7 +83,7 @@ body, html {
 }
 
 .menu-icon {
-    width: auto;
+    max-width: 70px;
     height: auto;
     cursor: pointer;
 }

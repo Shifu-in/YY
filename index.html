@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Main Screen</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -21,17 +21,62 @@
             <img src="sailormoon-aesthetic.gif" id="tap-gif" alt="Tap me">
         </div>
         <div id="bottom-bar">
-            <img src="home-icon.png" alt="Home" class="menu-icon" data-target="main-screen">
-            <img src="settings-icon.png" alt="Settings" class="menu-icon" data-target="settings-screen">
-            <img src="achievements-icon.png" alt="Achievements" class="menu-icon" data-target="achievements-screen">
-            <img src="channels-icon.png" alt="Channels" class="menu-icon" data-target="channels-screen">
+            <img src="file-cDg6XOzdiNNe7mQlnEPF1ZnA" alt="Home" class="menu-icon" data-target="main-screen">
+            <img src="file-TEJdblnU6aydOLCUGy9myzDJ" alt="Settings" class="menu-icon" data-target="settings-screen">
+            <img src="6 (1).png" alt="Achievements" class="menu-icon" data-target="achievements-screen">
+            <img src="7.png" alt="Channels" class="menu-icon" data-target="channels-screen">
         </div>
     </div>
-    <!-- Additional Screens -->
-    <div id="home-screen" style="display: none;">...</div>
-    <div id="settings-screen" style="display: none;">...</div>
-    <div id="achievements-screen" style="display: none;">...</div>
-    <div id="channels-screen" style="display: none;">...</div>
+
+    <!-- Заглушки -->
+    <div id="home-screen" style="display: none;">
+        <h2>Домашняя страница</h2>
+        <p>Контент домашней страницы...</p>
+        <button onclick="showScreen('main-screen')">Назад на Главную</button>
+    </div>
+    <div id="settings-screen" style="display: none;">
+        <h2>Настройки</h2>
+        <p>Общее число приглашенных друзей: <span id="friends-counter">0</span></p>
+        <p>Уровень игрока: <span id="player-level">-</span></p>
+        <p>Сумма заработанных денег: <span id="earned-money">0</span></p>
+        <button onclick="showScreen('main-screen')">Назад на Главную</button>
+    </div>
+    <div id="achievements-screen" style="display: none;">
+        <h2>Достижения игрока</h2>
+        <p>Число выигранных турниров по падл теннису: <span id="padel-tournaments">0</span></p>
+        <p>Число побед в трейдинг турнирах: <span id="trading-tournaments">0</span></p>
+        <p>Число подписчиков в социальных сетях: <span id="social-followers">0</span></p>
+        <p>Число совершенных сделок: <span id="trades-count">0</span></p>
+        <p>Самый большой PNL по сделке: <span id="biggest-pnl">0</span></p>
+        <p>Любимая монета: 
+            <select id="favorite-coin">
+                <option value="BTC">Bitcoin (BTC)</option>
+                <option value="ETH">Ethereum (ETH)</option>
+                <option value="USDT">Tether (USDT)</option>
+                <!-- Добавьте другие монеты по мере необходимости -->
+            </select>
+        </p>
+        <p>Любимая биржа: 
+            <select id="favorite-exchange">
+                <option value="Binance">Binance</option>
+                <option value="Coinbase">Coinbase</option>
+                <option value="Kraken">Kraken</option>
+                <!-- Добавьте другие биржи по мере необходимости -->
+            </select>
+        </p>
+        <button onclick="showScreen('main-screen')">Назад на Главную</button>
+    </div>
+    <div id="channels-screen" style="display: none;">
+        <h2>Channels</h2>
+        <div>Баланс токенов YOUNG: <span id="token-balance">0</span></div>
+        <ul>
+            <li>Channel 1 <button onclick="subscribeChannel()">Subscribe</button></li>
+            <li>Channel 2 <button onclick="subscribeChannel()">Subscribe</button></li>
+            <li>Channel 3 <button onclick="subscribeChannel()">Subscribe</button></li>
+        </ul>
+        <button onclick="showScreen('main-screen')">Назад на Главную</button>
+    </div>
+
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="script.js"></script>
 </body>

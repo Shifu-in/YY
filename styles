@@ -98,37 +98,4 @@ body, html {
 
 @keyframes coinAnimation {
     0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-}
-
-.xp-animation {
-    position: absolute;
-    font-size: 24px;
-    font-weight: bold;
-    color: green;
-    top: 50%;
-    right: 10%;
-    transform: translateY(-50%);
-    animation: xpAnimation 1s forwards;
-}
-
-@keyframes xpAnimation {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-}
-
-#settings-screen, #achievements-screen, #channels-screen, #home-screen {
-    display: none;
-}
+        opacity

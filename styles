@@ -13,6 +13,9 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#loading-screen {
     background: url('5.jpg') no-repeat center center fixed;
     background-size: cover;
 }
@@ -40,17 +43,6 @@ body, html {
     background: inherit;
     filter: blur(7px); /* Блюр 70% */
     z-index: -1;
-}
-
-#loading-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#loading-screen img {
-    width: 100px;
-    height: 100px;
 }
 
 #tap-area {

@@ -19,8 +19,8 @@ body, html {
 }
 
 #loading-screen img {
-    width: 100px;
-    height: 100px;
+    width: auto;
+    height: auto;
 }
 
 #main-screen, #home-screen, #settings-screen, #achievements-screen, #channels-screen {
@@ -41,7 +41,7 @@ body, html {
 }
 
 #tap-gif {
-    width: 200px;
+    width: auto;
     height: auto;
     cursor: pointer;
 }
@@ -80,8 +80,8 @@ body, html {
 }
 
 .menu-icon {
-    width: 70px;
-    height: 70px;
+    width: auto;
+    height: auto;
     cursor: pointer;
 }
 
@@ -98,4 +98,37 @@ body, html {
 
 @keyframes coinAnimation {
     0% {
-        opacity
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+.xp-animation {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    animation: xpAnimation 1s forwards;
+}
+
+@keyframes xpAnimation {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+#settings-screen, #achievements-screen, #channels-screen, #home-screen {
+    display: none;
+}

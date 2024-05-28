@@ -10,22 +10,125 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+#loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#loading-screen img {
+    width: 100px;
+    height: 100px;
+}
+
 #main-screen, #home-screen, #settings-screen, #achievements-screen, #channels-screen {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: #ffffff;
     padding: 20px;
     box-sizing: border-box;
+    position: relative;
 }
 
-.menu-icon {
-    width: 50px; /* Adjusted for better mobile responsiveness */
-    height: 50px; /* Adjusted for better mobile responsiveness */
+#tap-area {
+    position: relative;
+}
+
+#tap-gif {
+    width: 200px;
+    height: auto;
     cursor: pointer;
 }
 
-/* Additional responsive and animation styles */
+#top-bar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#coin-counter {
+    font-weight: bold;
+}
+
+#xp-bar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: green;
+}
+
+#bottom-bar {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-icon {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.coin-animation {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: gold;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    animation: coinAnimation 1s forwards;
+}
+
+@keyframes coinAnimation {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+.xp-animation {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    animation: xpAnimation 1s forwards;
+}
+
+@keyframes xpAnimation {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+#settings-screen, #achievements-screen, #channels-screen, #home-screen {
+    display: none;
+}
